@@ -20,7 +20,8 @@ const Bottles = () => {
        const handleAddToCart = bottle =>{
             const newCart=[...cart,bottle]
             setCart(newCart)
-            //console.log(r)
+            //console.log(newCart)
+            
         }
 
     return (
@@ -30,6 +31,7 @@ const Bottles = () => {
            <div className="bottle-container">
                     {
             bottles.map(x => <Bottle
+                key={x.id}
                 bottle={x}
                 handleAddToCart={handleAddToCart}
                 ></Bottle>)
